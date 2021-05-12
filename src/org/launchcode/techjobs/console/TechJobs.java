@@ -113,7 +113,7 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        try {
+        if (someJobs.size() >= 1){
             for (Map<String, String> entry : someJobs) {
                 System.out.println("*****");
                 for (String key : entry.keySet()) {
@@ -123,8 +123,8 @@ public class TechJobs {
                 }
                 System.out.println("*****\n");
             }
-        } catch (Exception e) {
-            System.out.println("There are no jobs available: ");
+        } else  {
+            System.out.println("Sorry, no results against this search! ");
         }
     }
 }
